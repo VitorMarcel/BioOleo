@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioÓleo - Sistema | Meus Barris</title>
+    <link rel="stylesheet" href="../css/bioOleo.css">
+</head>
+<body data-page="barris">
+
+    <header>
+        <div>
+            <a href="./bioOleo.html" class="link-img"><img src="../img/logo-bio.png" alt="BioÓleo" class="logo-img"></a>
+        </div>
+        <span class="line"></span>
+        <nav>
+            <ul class="list-ul">
+                <li><a href="./cliente.html">Clientes</a></li>
+                <li class="ativo"><a href="./barris.html">Meus Barris</a></li>
+                <li><a href="./frota.html">Frota em Tempo Real</a></li>
+                <li><a href="./certificado.html">Certificado e Impacto</a></li>
+            </ul>
+        </nav>
+        <div class="footer-header">
+            <p>Sistema de Gestão e Coleta</p>
+        </div>
+    </header>
+
+    <main class="main-page">
+        <div class="div-pai">
+            <div><h1>MEUS BARRIS</h1><p>Controle por QR Code, com perdas e multas</p></div>
+            <div class="kpis">
+                <div class="card kpi"><small>Com o cliente</small><b id="kAtivos">0</b></div>
+                <div class="card kpi"><small>Em trânsito</small><b id="kTrans">0</b></div>
+                <div class="card kpi"><small>Cobrança pendente</small><b id="kMulta">R$ 0,00</b></div>
+            </div>
+            <div class="card">
+                <h3>Escanear QR Code</h3>
+                <div class="linha">
+                    <label>Código do barril (vazio = próximo)<input type="text" id="qr" placeholder="0142" inputmode="numeric"></label>
+                    <button class="btn" id="scan">Escanear QR Code</button>
+                </div>
+                <p class="err" id="qErr" role="alert"></p>
+            </div>
+            <div class="card"><table><thead><tr><th>Barril</th><th>Capacidade</th><th>Situação</th><th>Status</th></tr></thead><tbody id="tBarris"></tbody></table></div>
+        </div>
+    </main>
+
+    <div id="toast" role="status"></div>
+    <script src="../js/bioOleo.js"></script>
+</body>
+</html>

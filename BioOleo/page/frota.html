@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioÓleo - Sistema | Frota em Tempo Real</title>
+    <link rel="stylesheet" href="../css/bioOleo.css">
+</head>
+<body data-page="frota">
+
+    <header>
+        <div>
+            <a href="./bioOleo.html" class="link-img"><img src="../img/logo-bio.png" alt="BioÓleo" class="logo-img"></a>
+        </div>
+        <span class="line"></span>
+        <nav>
+            <ul class="list-ul">
+                <li><a href="./cliente.html">Clientes</a></li>
+                <li><a href="./barris.html">Meus Barris</a></li>
+                <li class="ativo"><a href="./frota.html">Frota em Tempo Real</a></li>
+                <li><a href="./certificado.html">Certificado e Impacto</a></li>
+            </ul>
+        </nav>
+        <div class="footer-header">
+            <p>Sistema de Gestão e Coleta</p>
+        </div>
+    </header>
+
+    <main class="main-page">
+        <div class="div-pai">
+            <div><h1>FROTA EM TEMPO REAL</h1><p>Posição dos caminhões com GPS próprio</p></div>
+            <div class="card"><svg id="map" viewBox="0 0 300 200" role="img" aria-label="Mapa de Cianorte com caminhões"></svg></div>
+            <div class="card">
+                <table><thead><tr><th>Caminhão</th><th>Posição (lat, long)</th><th>Status</th></tr></thead><tbody id="tTrucks"></tbody></table>
+            </div>
+            <div class="card"><b>Próxima parada:</b> Restaurante Sabor, 14:30</div>
+        </div>
+    </main>
+
+    <div id="toast" role="status"></div>
+    <script src="../js/bioOleo.js"></script>
+</body>
+</html>
