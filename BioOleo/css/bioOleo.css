@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ===== VARIÁVEIS DE ESTILO (altere aqui para mudar o sistema todo) ===== */
+:root {
+    --bg-green: #14291d;
+    --cl-white: #fff;
+    --cl-doura: #d9922b;
+    --cl-cz: #c6c6c6;
+
+    --cl-bg: #f3f5f0;
+    --cl-card: #ffffff;
+    --cl-ink: #14201a;
+    --cl-mut: #5d6b62;
+    --cl-line: #d9dfd6;
+    --cl-green: #1f5a3a;
+    --cl-red: #b3261e;
+    --cl-truck: #1c427a;
+
+    --pill-ok-bg: #d6efdc;   --pill-ok-tx: #14532d;
+    --pill-info-bg: #d3e4fa; --pill-info-tx: #1c427a;
+    --pill-warn-bg: #f6e3ae; --pill-warn-tx: #6b4a05;
+    --pill-bad-bg: #f8d5d5;  --pill-bad-tx: #8a1c1c;
+
+    --radius: 14px;
+    --radius-sm: 10px;
+    --fnt-prin: 'Montserrat', sans-serif;
+}
+
+* { padding: 0; margin: 0; box-sizing: border-box; }
+body { display: grid; grid-template-columns: 250px 1fr; font-family: var(--fnt-prin); }
+
+/* ===== MENU LATERAL ===== */
+header { background: var(--bg-green); max-width: 300px; height: 100vh; position: sticky; top: 0; display: flex; flex-direction: column; }
+.logo-img { width: 100%; padding: 15px; }
+.line { border-top: 1px solid var(--cl-doura); margin: 10px 15px; }
+.list-ul { list-style-type: none; }
+.list-ul li { margin: 15px 20px 10px 20px; padding: 10px; cursor: pointer; border-top-right-radius: 10px; border-bottom-right-radius: 10px; }
+.list-ul li a { text-decoration: none; color: var(--cl-white); font-weight: 600; display: block; margin: -10px; padding: 10px; }
+.list-ul li:hover, .list-ul li.ativo { background: #ffffff5a; transition: all 0.3s ease-out; border-left: 5px solid var(--cl-doura); }
+.footer-header { position: absolute; bottom: 0; margin: 0 100px 30px 30px; font-size: 13px; color: var(--cl-cz); }
+
+/* ===== HOME ===== */
+.main-bio {
+    background: url(https://plus.unsplash.com/premium_photo-1683121825174-ff1620a5e387?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D) center no-repeat;
+    background-size: cover; display: flex; align-items: center;
+}
+.div-text-bio { margin-left: 70px; width: 400px; height: 50%; display: flex; flex-direction: column; justify-content: space-evenly; font-family: var(--fnt-prin); }
+.div-text-bio h1 { color: var(--bg-green); font-size: 50px; }
+.div-text-bio p { color: var(--bg-green); font-size: 18px; }
+.div-text-bio button { margin-right: 50%; padding: 15px; background: var(--bg-green); border: none; border-radius: 10px; cursor: pointer; }
+.div-text-bio button:hover { background: var(--cl-doura); transition: all 0.3s ease-out; }
+.div-text-bio button a { text-decoration: none; color: var(--cl-white); font-size: 16px; font-weight: 600; }
+
+/* ===== PÁGINAS INTERNAS ===== */
+.main-page { background: var(--cl-bg); color: var(--cl-ink); min-height: 100vh; padding: 36px 4vw; }
+.div-pai { max-width: 980px; display: flex; flex-direction: column; gap: 18px; }
+.div-pai h1 { font-size: 28px; font-weight: 800; color: var(--bg-green); }
+.div-pai > div > p { color: var(--cl-mut); margin-top: 4px; }
+.card { background: var(--cl-card); border: 1px solid var(--cl-line); border-radius: var(--radius); padding: 20px; }
+.card h3 { font-size: 16px; margin-bottom: 12px; }
+
+label { display: flex; flex-direction: column; font-size: 13px; color: var(--cl-mut); gap: 4px; }
+input, select { padding: 10px 12px; border: 1px solid var(--cl-line); border-radius: var(--radius-sm); background: var(--cl-bg); color: var(--cl-ink); font: inherit; font-size: 15px; }
+input:focus, select:focus, button:focus-visible { outline: 2px solid var(--cl-doura); outline-offset: 2px; }
+.form-cadastro form { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; align-items: end; }
+.form-cadastro form .err, .form-cadastro form .btn { grid-column: 1 / -1; }
+.err { color: var(--cl-red); min-height: 1.3em; font-size: 14px; }
+.btn { background: var(--bg-green); color: var(--cl-white); border: none; border-radius: var(--radius-sm); padding: 12px 22px; font: inherit; font-weight: 600; cursor: pointer; justify-self: start; }
+.btn:hover { background: var(--cl-doura); transition: all 0.3s ease-out; }
+
+table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--cl-line); }
+th { color: var(--cl-mut); font-size: 12px; font-weight: 600; }
+.vazio { color: var(--cl-mut); text-align: center; padding: 18px; }
+.link { background: none; border: 0; color: var(--cl-green); cursor: pointer; font: inherit; text-decoration: underline; }
+
+.pill { font-size: 12px; padding: 3px 10px; border-radius: 99px; white-space: nowrap; border: 0; font-family: inherit; background: var(--pill-ok-bg); color: var(--pill-ok-tx); }
+.pill.info { background: var(--pill-info-bg); color: var(--pill-info-tx); }
+.pill.warn { background: var(--pill-warn-bg); color: var(--pill-warn-tx); }
+.pill.bad  { background: var(--pill-bad-bg);  color: var(--pill-bad-tx); }
+button.pill { cursor: pointer; }
+
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.kpi small { color: var(--cl-mut); font-size: 13px; }
+.kpi b { display: block; font-size: 28px; color: var(--cl-green); }
+.linha { display: flex; gap: 10px; align-items: end; flex-wrap: wrap; }
+.linha label { flex: 1; min-width: 180px; }
+#map { width: 100%; border: 1px dashed var(--cl-line); border-radius: var(--radius-sm); background: var(--cl-bg); color: var(--cl-ink); }
+
+#toast { position: fixed; bottom: 24px; left: 50%; transform: translate(-50%, 80px); background: var(--bg-green); color: var(--cl-white); padding: 10px 20px; border-radius: 99px; transition: transform .3s; z-index: 9; }
+#toast.show { transform: translate(-50%, 0); }
+
+@media (max-width: 760px) {
+    body { grid-template-columns: 1fr; }
+    header { max-width: none; height: auto; position: static; }
+    .footer-header { display: none; }
+    .list-ul { display: flex; flex-wrap: wrap; }
+    .list-ul li { margin: 4px; }
+}

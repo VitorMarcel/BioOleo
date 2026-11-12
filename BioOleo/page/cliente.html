@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioÓleo - Sistema | Cliente</title>
+    <link rel="stylesheet" href="../css/bioOleo.css">
+</head>
+<body data-page="cliente">
+
+    <header>
+        <div>
+            <a href="./bio-oleo-sistema.html" class="link-img"><img src="../img/logo-bio.png" alt="BioÓleo" class="logo-img"></a>
+        </div>
+        <span class="line"></span>
+        <nav>
+            <ul class="list-ul">
+                <li class="ativo"><a href="./cliente.html">Clientes</a></li>
+                <li><a href="./barris.html">Meus Barris</a></li>
+                <li><a href="./frota.html">Frota em Tempo Real</a></li>
+                <li><a href="./certificado.html">Certificado e Impacto</a></li>
+            </ul>
+        </nav>
+        <div class="footer-header">
+            <p>Sistema de Gestão e Coleta</p>
+        </div>
+    </header>
+
+    <main class="main-page main-client">
+        <div class="div-pai">
+            <div>
+                <h1>CLIENTES</h1>
+                <p>Pessoas Físicas e Jurídicas em uma base única</p>
+            </div>
+            <div class="form-cadastro card">
+                <form id="fCli" novalidate>
+                    <label>Tipo
+                        <select id="lTipo"><option>PF</option><option>PJ</option></select>
+                    </label>
+                    <label>Nome ou Razão Social<input type="text" id="lNome" placeholder="Digite seu nome ou nome da instituição"></label>
+                    <label><span id="lDocLbl">CPF</span><input type="text" id="lDoc" inputmode="numeric"></label>
+                    <label>Número<input type="tel" id="lTel" placeholder="(44) 99999-9999"></label>
+                    <label>Endereço<input type="text" id="lEnd"></label>
+                    <p class="err" id="lErr" role="alert"></p>
+                    <button class="btn">Cadastrar cliente</button>
+                </form>
+            </div>
+            <div class="form-busca card">
+                <label>Buscar<input type="text" id="busca" placeholder="Nome ou documento"></label>
+                <table><thead><tr><th>Tipo</th><th>Nome</th><th>Documento</th><th>Telefone</th><th></th></tr></thead><tbody id="tCli"></tbody></table>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast" role="status"></div>
+    <script src="../js/bioOleo.js"></script>
+</body>
+</html>
